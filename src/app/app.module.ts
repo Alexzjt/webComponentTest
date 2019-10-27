@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
-import {NgZorroAntdModule, NZ_I18N, NzCalendarModule, zh_CN} from 'ng-zorro-antd';
+import {NZ_I18N, NzCalendarModule, zh_CN} from 'ng-zorro-antd';
 import {createCustomElement} from '@angular/elements';
 import zh from '@angular/common/locales/zh';
 import {registerLocaleData} from '@angular/common';
@@ -35,6 +35,6 @@ export class AppModule implements DoBootstrap{
 
   ngDoBootstrap() {
     const elm = createCustomElement(AppComponent, { injector: this.injector });
-    customElements.define('custom-element', elm);
+    customElements.define('app-root', elm);
   }
 }
